@@ -1,13 +1,25 @@
-import './Home.css'
+import homeLogo from "../../assets/img/casa.png"
+function Home () {
 
-function Home() {
     return (
-    <>
-    <h1 className="titulo">Manipulando o mundo</h1>
-    < img className="img"src="https://kanto.legiaodosherois.com.br/w728-h381-gnw-cfill-gcc/wp-content/uploads/2022/01/legiao_g5IVuNqbsjQe.jpg.webp"
-    alt="Imagem do Eren" />
-    </>
+        <>
+            <div className="bg-indigo-900 felx justifiy-center">
+             <div className="container grid grid-cols-2 text-white">
+               <div className="flex flex-col gap-4 items-center justify-center py-4">
+                 <h2 className="text-5xl font-bold">Seja bem vindo!</h2>
+                 <p className="text-xl">Expresse aqui seus pensamentos e opniões</p>
+
+                 <div className="flex justify-around gap-4">
+                    <button className="rounded bg-white text-bue-800 py-2 px-4">Ver postagens</button>
+                </div>                
+               </div>
+                 <div className="flex justify-center">
+                    <img src={homeLogo} alt="Imagem de uma casa" className="w-2/3" />
+                 </div>
+             </div>
+            </div>
+        </>
     );
 }
 
-export default Home;
+export default Home; 
