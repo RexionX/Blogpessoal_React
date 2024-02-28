@@ -1,4 +1,7 @@
 import React from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
@@ -11,6 +14,14 @@ import { AuthProvider } from './contexts/AuthContext';
 import ListaTemas from './components/temas/listaTemas/ListaTemas';
 import FormularioTema from './components/temas/formularioTema/FormularioTema';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
+import ListaPostagens from './components/postagens/listaPostagens/ListaPostagens';
+import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
+import FormularioPostagem from './components/postagens/formularioPostagem/FormularioPostagem';
+
+import Perfil from './paginas/perfil/Perfil';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function App() {
@@ -32,6 +43,11 @@ function App() {
           <Route path="/cadastroTema" element={<FormularioTema />} />
           <Route path="/editarTema/:id" element={<FormularioTema />} />
           <Route path="/deletarTema/:id" element={<DeletarTema />} />
+          <Route path="/postagens" element={<ListaPostagens />} />
+          <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/editarPostagem/:id" element={<FormularioPostagem />} />
+          
           </Routes>
         </div>
         <Footer/>
